@@ -1,9 +1,9 @@
 import Def.googlemap
 
-my_url = soup_obj.select("em.info_variation")
+my_url = soup_obj.select("em.info_variation") # url로 데이터 가져오기
 cnt = 0
 
-key = ["코로나 확진자","검사 중인 환자"]
+key = ["코로나 확진자","검사 중인 환자"] # key값 가져오기
 value = []
 
 for j in my_url:  # class -> em.info_variation를 순서대로 Parsing한것
@@ -12,7 +12,7 @@ for j in my_url:  # class -> em.info_variation를 순서대로 Parsing한것
     if cnt > 1:
         break
 
-Corona = {}
+Corona = {} # 코로나 Dictionary Data
 for i in range(len(key)):
     Corona[key[i]] = value[i]
     
